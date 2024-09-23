@@ -1,0 +1,79 @@
+#include <iostream>
+using namespace std;
+const float pi = 3.14;
+
+    float calcCircle(float diam) {
+        return pi * (diam / 2) * (diam / 2);
+    }
+    float calcCube(float side) {
+        return side * side;
+    }
+    float calcWideCube(float side1, float side2) {
+        return side1 * side2;
+    }
+    
+    int main()
+    {
+        string f1, f2;
+        float side, side1, side2, diam, S1, S2;
+        
+        cout << "1. Круг, Квадрат или Прямоугольник? ";
+        cin >> f1;
+        
+        if (f1 == "Круг") {
+            cout << "Введите диаметр: ";
+            cin >> diam;
+            S1 = calcCircle(diam);
+        }
+        
+        else if (f1 == "Квадрат") {
+            cout << "Введите сторону: ";
+            cin >> side;
+            S1 = calcCube(side);
+        }
+        
+        else if (f1 == "Прямоугольник") {
+            cout << "Введите первую сторону: ";
+            cin >> side1;
+            cout << "Введите вторую сторону: ";
+            cin >> side2;
+            S1 = calcWideCube(side1, side2);
+        }
+        
+        else {
+            cout << "Ещё раз!";
+        }
+        
+        cout << "\n";
+        cout << "2. Круг, Квадрат или Прямоугольник? ";
+        cin >> f2;
+        
+        if (f2 == "Круг") {
+            cout << "Введите диаметр: ";
+            cin >> diam;
+            S2 = calcCircle(diam);
+        }
+        
+        else if (f2 == "Квадрат") {
+            cout << "Введите сторону: ";
+            cin >> side;
+            S2 = calcCube(side);
+        }
+        
+        else if (f2 == "Прямоугольник") {
+            cout << "Введите первую сторону: ";
+            cin >> side1;
+            cout << "Введите вторую сторону: ";
+            cin >> side2;
+            S2 = calcWideCube(side1, side2);
+        }
+        
+        else {
+            cout << "Ещё раз!";
+        }
+        
+        cout << "\n";
+        cout << "Лови пропорцию: " << S2 / S1;
+        
+        
+     }
